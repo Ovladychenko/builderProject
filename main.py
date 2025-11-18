@@ -27,7 +27,8 @@ mause_list = {
 
 
 class Shop:
-    def calculate_computer(self, computer: Computer):
+    @staticmethod
+    def calculate_computer(computer: Computer):
         prise = (cpu_list.get(computer.cpu)
                  + keyboard_list.get(computer.keyboard)
                  + system_block_list.get(computer.system_block)
@@ -86,5 +87,5 @@ computer.add_keyboard('Logitech')
 computer.add_system_block('Dell')
 computer.add_mause('HyperX')
 
-shop = Shop()
-shop.calculate_computer(computer)
+#shop = Shop()
+Shop.calculate_computer(computer)
